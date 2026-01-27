@@ -20,12 +20,27 @@ A native iOS app built with SwiftUI for Conquest Solutions client support. The a
 - 🔜 **Submit Tickets**: Request technical support (Coming Soon)
 - 🔜 **Maintenance Requests**: Submit special maintenance requests (Coming Soon)
 
+## Quick Start
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/patrickpage-dev/iOS-App---test.git
+   cd iOS-App---test/iOS\ App
+   ```
+
+2. Open the project in Xcode (see Setup Instructions below)
+
+3. Complete Clerk integration (see CLERK_SETUP.md)
+
+4. Build and run on an iOS device
+
 ## Requirements
 
 - iOS 15.0 or later
 - Xcode 14.0 or later
 - Swift 5.7 or later
 - Clerk account and publishable key
+- macOS (for Xcode development)
 
 ## Setup Instructions
 
