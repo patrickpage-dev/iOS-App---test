@@ -19,16 +19,20 @@ struct SignInView: View {
             // Header
             VStack(spacing: 16) {
                 // Logo Image - add ConquestSolutionsLogo.png to your project
-                Image(Constants.logoImageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 80)
-                    .onAppear {
-                        // Fallback message if logo not found
-                        if UIImage(named: Constants.logoImageName) == nil {
-                            print("Warning: Logo image '\(Constants.logoImageName)' not found. Add the logo PNG to your project.")
-                        }
+                // If logo is not found, fallback to system icon
+                Group {
+                    if UIImage(named: Constants.logoImageName) != nil {
+                        Image(Constants.logoImageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 80)
+                    } else {
+                        // Fallback icon until logo is added
+                        Image(systemName: "building.2.fill")
+                            .font(.system(size: 60))
+                            .foregroundColor(Constants.brandRed)
                     }
+                }
                 
                 Text("Conquest Solutions")
                     .font(.largeTitle)
