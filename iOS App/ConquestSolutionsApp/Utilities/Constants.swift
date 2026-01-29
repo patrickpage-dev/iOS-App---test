@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Constants {
     // Phone number for one-click calling
@@ -22,4 +23,12 @@ struct Constants {
         // Add your allowed domains here
         // Example: "example.com", "hoa.org"
     ]
+    
+    // Brand Colors - Conquest Solutions Red
+    // RGB: (220, 38, 38) or #DC2626 - matches website red
+    static let brandRed = Color(red: 220/255, green: 38/255, blue: 38/255)
+    static let brandRedDark = Color(red: 185/255, green: 28/255, blue: 28/255)
+    
+    // Logo and Assets
+    static let logoImageName = "ConquestSolutionsLogo"
 }

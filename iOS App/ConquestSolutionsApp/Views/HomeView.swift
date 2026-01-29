@@ -77,7 +77,7 @@ struct HomeView: View {
                         }
                     } label: {
                         Image(systemName: "person.circle.fill")
-                            .foregroundColor(.blue)
+                            .foregroundColor(Constants.brandRed)
                     }
                 }
             }

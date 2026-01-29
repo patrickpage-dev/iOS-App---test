@@ -49,13 +49,13 @@ struct CallButton: View {
             .padding(.vertical, 20)
             .background(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.blue, Color.blue.opacity(0.8)]),
+                    gradient: Gradient(colors: [Constants.brandRed, Constants.brandRedDark]),
                     startPoint: .leading,
                     endPoint: .trailing
                 )
             )
             .cornerRadius(16)
-            .shadow(color: Color.blue.opacity(0.3), radius: 8, x: 0, y: 4)
+            .shadow(color: Constants.brandRed.opacity(0.3), radius: 8, x: 0, y: 4)
         }
         .buttonStyle(PlainButtonStyle())
     }

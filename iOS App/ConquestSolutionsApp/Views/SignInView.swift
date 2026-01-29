@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct SignInView: View {
     @StateObject private var clerkManager = ClerkManager()
@@ -17,13 +18,22 @@ struct SignInView: View {
         VStack(spacing: 0) {
             // Header
             VStack(spacing: 16) {
-                Image(systemName: "building.2.fill")
-                    .font(.system(size: 60))
-                    .foregroundColor(.blue)
+                // Logo Image - add ConquestSolutionsLogo.png to your project
+                Image(Constants.logoImageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 80)
+                    .onAppear {
+                        // Fallback message if logo not found
+                        if UIImage(named: Constants.logoImageName) == nil {
+                            print("Warning: Logo image '\(Constants.logoImageName)' not found. Add the logo PNG to your project.")
+                        }
+                    }
                 
                 Text("Conquest Solutions")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .foregroundColor(Constants.brandRed)
                 
                 Text("Client Support Portal")
                     .font(.subheadline)
@@ -66,7 +76,7 @@ struct SignInView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.blue)
+                            .background(Constants.brandRed)
                             .cornerRadius(12)
                     }
                     .padding(.top, 10)

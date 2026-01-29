@@ -9,7 +9,9 @@ A native iOS app built with SwiftUI for Conquest Solutions client support. The a
 ✅ **Project Structure**: Complete  
 ✅ **One-Click Calling**: Implemented  
 ✅ **Authentication UI**: Complete  
+✅ **Branding**: Conquest Solutions red color scheme implemented  
 ⚠️ **Clerk Integration**: Requires Clerk SDK setup (see CLERK_SETUP.md)  
+⚠️ **Logo & App Icon**: Requires logo image setup (see LOGO_SETUP.md)  
 🔜 **Ticket Submission**: Placeholder ready  
 🔜 **Maintenance Requests**: Placeholder ready
 
@@ -70,7 +72,13 @@ Since this project structure was created on Windows, you'll need to create the X
    - All files in `Utilities/` folder
    - All files in `Models/` folder (if any)
 
-### 3. Configure Info.plist
+### 3. Add Logo and App Icon
+
+1. Follow the instructions in `LOGO_SETUP.md` to add the Conquest Solutions logo
+2. Add the app icon to the Assets catalog
+3. The logo will appear on the Sign In screen once added
+
+### 4. Configure Info.plist
 
 1. In Xcode, select your project in the navigator
 2. Select your target
@@ -81,7 +89,7 @@ Since this project structure was created on Windows, you'll need to create the X
 
 Alternatively, you can use the provided `Info.plist` file in the root directory.
 
-### 4. Install Clerk SDK
+### 5. Install Clerk SDK
 
 1. In Xcode, select your project
 2. Go to **File > Add Package Dependencies...**
@@ -90,7 +98,7 @@ Alternatively, you can use the provided `Info.plist` file in the root directory.
    - Version: Latest stable version
 4. Add the package to your target
 
-### 5. Configure Clerk
+### 6. Configure Clerk
 
 1. Sign up or log in to [Clerk Dashboard](https://dashboard.clerk.com)
 2. Create a new application or select an existing one
@@ -101,7 +109,7 @@ Alternatively, you can use the provided `Info.plist` file in the root directory.
    static let clerkPublishableKey = "pk_test_your_actual_key_here"
    ```
 
-### 6. Configure Domain Restrictions in Clerk
+### 7. Configure Domain Restrictions in Clerk
 
 1. In Clerk Dashboard, go to **Settings > Restrictions**
 2. Configure email domain allowlist:
@@ -111,7 +119,7 @@ Alternatively, you can use the provided `Info.plist` file in the root directory.
    - Go to **Settings > User Management**
    - Enable email invitations
 
-### 7. Update ClerkManager.swift
+### 8. Update ClerkManager.swift
 
 The `ClerkManager.swift` file contains placeholder code for Clerk SDK integration. You'll need to update it based on the actual Clerk iOS SDK API. Refer to [Clerk iOS Documentation](https://clerk.com/docs/quickstarts/ios) for the correct implementation.
 
@@ -121,7 +129,7 @@ Key areas to update:
 - Sign in implementation in `signIn(email:password:)`
 - Sign out implementation in `signOut()`
 
-### 8. Build and Run
+### 9. Build and Run
 
 1. Connect an iOS device or start the iOS Simulator
 2. Select your target device in Xcode
@@ -154,6 +162,13 @@ ConquestSolutionsApp/
 The main phone number is configured in `Constants.swift`:
 - `mainPhoneNumber`: `"7709532500"`
 - `formattedPhoneNumber`: `"(770) 953-2500"`
+
+### Brand Colors
+
+The app uses Conquest Solutions brand red color:
+- `brandRed`: RGB(220, 38, 38) - Primary brand red
+- `brandRedDark`: RGB(185, 28, 28) - Darker variant for gradients
+- All UI elements (buttons, icons, text) use the brand red instead of blue
 
 ### Allowed Email Domains
 
