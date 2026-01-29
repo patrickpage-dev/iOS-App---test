@@ -35,11 +35,12 @@ The file structure is ready, but you need to replace placeholder code with actua
 
 #### 1. Import Statement
 ```swift
-import ClerkSDK
-// or
+import Foundation
+import Combine
 import Clerk
-// Check Clerk documentation for correct import
 ```
+
+**Note:** The correct import is `import Clerk` (not `ClerkSDK`). Also include `import Combine` for `ObservableObject` and `@Published` properties.
 
 #### 2. Clerk Initialization in `setupClerk()`
 Replace the placeholder with actual Clerk initialization:

@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import ClerkSDK
+import Combine
+import Clerk
 
 @MainActor
 class ClerkManager: ObservableObject {
